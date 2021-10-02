@@ -1,2 +1,3 @@
 # POO-Experiments
-Atividades desenvolvidas em java usando conceitos de Orientação a Objetos
+
+Activities developed in Java using Object Orientation concepts
