@@ -1,3 +1,3 @@
-# POO-Experiments
+# OOP-Experiments
 
-Activities developed in Java using Object Orientation Programming concepts
+Activities developed in Java using Object Orientation Programming concepts in Java
