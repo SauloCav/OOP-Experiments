@@ -41,10 +41,8 @@ public class Funcionario {
 		
 	}
 	
-	public boolean validaCPF(String CPF) {
-		
-		return (CPF.length() == 14);
-		
+	public boolean validaCPF(String CPF) {	
+		return (CPF.length() == 14);	
 	}
 	
 	public boolean validaDataNascimento(GregorianCalendar dataDeNascimento) {
@@ -94,5 +92,4 @@ public class Funcionario {
 		
 	}
 	
-
 }
