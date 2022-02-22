@@ -96,7 +96,7 @@ public class GUIEvent extends GUI {
 		label_3.setBounds(217, 256, 402, 43);
 		frame2.getContentPane().add(label_3);
 		
-		JLabel lblBonus = new JLabel("Bônus: ");
+		JLabel lblBonus = new JLabel("BÃ´nus: ");
 		lblBonus.setFont(new Font("DejaVu Serif Condensed", Font.PLAIN, 16));
 		lblBonus.setBounds(52, 310, 124, 43);
 		frame2.getContentPane().add(lblBonus);
@@ -158,14 +158,14 @@ public class GUIEvent extends GUI {
 					
 					gaq.print("");
 					gaq.print("Nome"+";"+ven.getNome()+";\n");
-					gaq.print("Salário Base"+";"+String.valueOf("R$ " + ven.isSalBase())+";\n");
-					gaq.print("Comissão"+";"+String.valueOf("R$ " + cal.calcularComissao(ven.isTotalVendas()))+";\n");
-					gaq.print("Salário Bruto"+";"+String.valueOf("R$ " + cal.calcularSalarioBruto(ven.isSalBase(), ven.isTotalVendas()))+";\n");
-					gaq.print("Bônus"+";"+String.valueOf("R$ " + cal.calcularBonus(ven.isTotalVendas()))+";\n");
-					gaq.print("Salário Família"+";"+String.valueOf("R$ " + cal.calcularSalarioFamilia(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes()))+";\n");
+					gaq.print("SalÃ¡rio Base"+";"+String.valueOf("R$ " + ven.isSalBase())+";\n");
+					gaq.print("ComissÃ£o"+";"+String.valueOf("R$ " + cal.calcularComissao(ven.isTotalVendas()))+";\n");
+					gaq.print("SalÃ¡rio Bruto"+";"+String.valueOf("R$ " + cal.calcularSalarioBruto(ven.isSalBase(), ven.isTotalVendas()))+";\n");
+					gaq.print("BÃ´nus"+";"+String.valueOf("R$ " + cal.calcularBonus(ven.isTotalVendas()))+";\n");
+					gaq.print("SalÃ¡rio FamÃ­lia"+";"+String.valueOf("R$ " + cal.calcularSalarioFamilia(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes()))+";\n");
 					gaq.print("IRPF"+";"+String.valueOf("R$ " + cal.calcularIRPF(ven.isSalBase(), ven.isTotalVendas()))+";\n");
 					gaq.print("INSS"+";"+String.valueOf("R$ " + cal.calcularINSS(ven.isSalBase(), ven.isTotalVendas()))+";\n");
-					gaq.print("Salário Líquido"+";"+String.valueOf("R$ " + cal.calcularSalarioLiquido(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes()))+";\n");
+					gaq.print("SalÃ¡rio LÃ­quido"+";"+String.valueOf("R$ " + cal.calcularSalarioLiquido(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes()))+";\n");
 					aq.close();
 					
 					JOptionPane.showMessageDialog(null, "CSV Salvo com Sucesso!", null, JOptionPane.INFORMATION_MESSAGE);
@@ -174,7 +174,6 @@ public class GUIEvent extends GUI {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
-				
 				
 			}
 		});
@@ -188,7 +187,7 @@ public class GUIEvent extends GUI {
 		btnNoSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "Operações Finalizadas!", null, JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "OperaÃ§Ãµes Finalizadas!", null, JOptionPane.INFORMATION_MESSAGE);
 				System.exit(0);
 				
 			}
@@ -214,19 +213,19 @@ public class GUIEvent extends GUI {
 					table.addCell(new PdfPCell(new Paragraph("Nome")));
 					table.addCell(new PdfPCell(new Paragraph(ven.getNome())));
 					
-					table.addCell(new PdfPCell(new Paragraph("Salário Base")));
+					table.addCell(new PdfPCell(new Paragraph("SalÃ¡rio Base")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + ven.isSalBase()))));
 					
-					table.addCell(new PdfPCell(new Paragraph("Comissão")));
+					table.addCell(new PdfPCell(new Paragraph("ComissÃ£o")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + cal.calcularComissao(ven.isTotalVendas())))));
 					
-					table.addCell(new PdfPCell(new Paragraph("Salário Bruto")));
+					table.addCell(new PdfPCell(new Paragraph("SalÃ¡rio Bruto")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + cal.calcularSalarioBruto(ven.isSalBase(), ven.isTotalVendas())))));
 					
-					table.addCell(new PdfPCell(new Paragraph("Bônus")));
+					table.addCell(new PdfPCell(new Paragraph("BÃ´nus")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + cal.calcularBonus(ven.isTotalVendas())))));
 					
-					table.addCell(new PdfPCell(new Paragraph("Salário Família")));
+					table.addCell(new PdfPCell(new Paragraph("SalÃ¡rio FamÃ­lia")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + cal.calcularSalarioFamilia(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes())))));
 					
 					table.addCell(new PdfPCell(new Paragraph("IRPF")));
@@ -235,7 +234,7 @@ public class GUIEvent extends GUI {
 					table.addCell(new PdfPCell(new Paragraph("INSS")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf(String.valueOf("R$ " + cal.calcularINSS(ven.isSalBase(), ven.isTotalVendas()))))));
 					
-					table.addCell(new PdfPCell(new Paragraph("Salário Líquido")));
+					table.addCell(new PdfPCell(new Paragraph("SalÃ¡rio LÃ­quido")));
 					table.addCell(new PdfPCell(new Paragraph(String.valueOf("R$ " + cal.calcularSalarioLiquido(ven.isSalBase(), ven.isTotalVendas(), ven.getNumeroDeDependentes())))));
 					
 					document.add(table);
