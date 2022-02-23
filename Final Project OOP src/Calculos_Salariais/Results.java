@@ -5,8 +5,7 @@ public class Results implements Calculos {
 	@Override
 	public double calcularComissao(double totalVendas) {
 		
-		double c = 0;
-		
+		double c = 0;	
 		if(totalVendas > 50000 && totalVendas <= 100000) {
 			c = (totalVendas*(0.02));
 		}
@@ -16,7 +15,6 @@ public class Results implements Calculos {
 		if(totalVendas > 150000) {
 			c = (totalVendas*(0.07));
 		}
-		
 		return c;
 		
 	}
@@ -25,7 +23,6 @@ public class Results implements Calculos {
 	public double calcularSalarioBruto(double salBase, double totalVendas) {
 		
 		double c = calcularComissao(totalVendas);
-		
 		return c + salBase;
 		
 	}
@@ -34,11 +31,9 @@ public class Results implements Calculos {
 	public double calcularBonus(double totalVendas) {
 		
 		double b = 0;
-		
 		if(totalVendas > 50000) {
 			b = 500;
 		}
-		
 		return b;
 		
 	}
@@ -61,7 +56,6 @@ public class Results implements Calculos {
 		if(sb > 3582) {
 			irpf = (sb*(0.275));
 		}
-		
 		return irpf;
 		
 	}
@@ -81,7 +75,6 @@ public class Results implements Calculos {
 		if((sb > 1609.45) && (sb <= 3218.90)) {
 			inss = (sb*(0.11));
 		}
-		
 		return inss;
 		
 	}
@@ -99,7 +92,6 @@ public class Results implements Calculos {
 		if((sb > 5000.40) && (sb <= 7521.20)) {
 			sf = (numeroDeDependentes * 18.08);
 		}
-		
 		return sf;
 		
 	}
@@ -115,7 +107,6 @@ public class Results implements Calculos {
 		double salLiquido;
 		
 		salLiquido = (((sb - irpf) - inss) + (bonus + salarioFamilia));
-		
 		return salLiquido;
 		
 	}
